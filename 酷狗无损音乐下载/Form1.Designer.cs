@@ -36,33 +36,38 @@
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.skinButton2 = new CCWin.SkinControl.SkinButton();
             this.skinButton3 = new CCWin.SkinControl.SkinButton();
-            this.listBox1 = new CCWin.SkinControl.SkinListBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.resultListView = new System.Windows.Forms.ListView();
+            this.name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.bitRate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.extName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.size = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.time = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 52);
+            this.textBox1.Location = new System.Drawing.Point(7, 51);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(323, 25);
+            this.textBox1.Size = new System.Drawing.Size(405, 21);
             this.textBox1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 479);
+            this.label1.Location = new System.Drawing.Point(7, 493);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 15);
+            this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 3;
             this.label1.Text = "下载到";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(79, 474);
+            this.textBox2.Location = new System.Drawing.Point(54, 489);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(259, 25);
+            this.textBox2.Size = new System.Drawing.Size(358, 21);
             this.textBox2.TabIndex = 4;
             // 
             // timer1
@@ -72,12 +77,17 @@
             // skinButton1
             // 
             this.skinButton1.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton1.BaseColor = System.Drawing.Color.LightBlue;
             this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton1.DownBack = null;
-            this.skinButton1.Location = new System.Drawing.Point(350, 53);
+            this.skinButton1.DownBaseColor = System.Drawing.Color.Gainsboro;
+            this.skinButton1.GlowColor = System.Drawing.Color.LightBlue;
+            this.skinButton1.Location = new System.Drawing.Point(418, 50);
             this.skinButton1.MouseBack = null;
+            this.skinButton1.MouseBaseColor = System.Drawing.Color.LightBlue;
             this.skinButton1.Name = "skinButton1";
             this.skinButton1.NormlBack = null;
+            this.skinButton1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
             this.skinButton1.Size = new System.Drawing.Size(75, 23);
             this.skinButton1.TabIndex = 9;
             this.skinButton1.Text = "搜素";
@@ -87,13 +97,17 @@
             // skinButton2
             // 
             this.skinButton2.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton2.BaseColor = System.Drawing.Color.LightBlue;
             this.skinButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton2.DownBack = null;
-            this.skinButton2.Location = new System.Drawing.Point(183, 440);
+            this.skinButton2.DownBaseColor = System.Drawing.Color.LightBlue;
+            this.skinButton2.Location = new System.Drawing.Point(219, 447);
             this.skinButton2.MouseBack = null;
+            this.skinButton2.MouseBaseColor = System.Drawing.Color.LightBlue;
             this.skinButton2.Name = "skinButton2";
             this.skinButton2.NormlBack = null;
-            this.skinButton2.Size = new System.Drawing.Size(75, 23);
+            this.skinButton2.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton2.Size = new System.Drawing.Size(88, 29);
             this.skinButton2.TabIndex = 10;
             this.skinButton2.Text = "下载";
             this.skinButton2.UseVisualStyleBackColor = false;
@@ -102,32 +116,21 @@
             // skinButton3
             // 
             this.skinButton3.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton3.BaseColor = System.Drawing.Color.LightBlue;
             this.skinButton3.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton3.DownBack = null;
-            this.skinButton3.Location = new System.Drawing.Point(355, 474);
+            this.skinButton3.DownBaseColor = System.Drawing.Color.LightBlue;
+            this.skinButton3.Location = new System.Drawing.Point(418, 488);
             this.skinButton3.MouseBack = null;
+            this.skinButton3.MouseBaseColor = System.Drawing.Color.LightBlue;
             this.skinButton3.Name = "skinButton3";
             this.skinButton3.NormlBack = null;
-            this.skinButton3.Size = new System.Drawing.Size(62, 23);
+            this.skinButton3.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton3.Size = new System.Drawing.Size(75, 23);
             this.skinButton3.TabIndex = 11;
             this.skinButton3.Text = "浏览";
             this.skinButton3.UseVisualStyleBackColor = false;
             this.skinButton3.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // listBox1
-            // 
-            this.listBox1.Back = null;
-            this.listBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.listBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(15, 90);
-            this.listBox1.MouseColor = System.Drawing.Color.LightGray;
-            this.listBox1.Name = "listBox1";
-            this.listBox1.RowBackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.listBox1.SelectedColor = System.Drawing.Color.Gray;
-            this.listBox1.Size = new System.Drawing.Size(410, 344);
-            this.listBox1.TabIndex = 12;
             // 
             // statusStrip1
             // 
@@ -135,27 +138,69 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(4, 521);
+            this.statusStrip1.Location = new System.Drawing.Point(4, 524);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(432, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(492, 22);
             this.statusStrip1.TabIndex = 13;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(69, 20);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(56, 17);
             this.toolStripStatusLabel1.Text = "准备就绪";
+            // 
+            // resultListView
+            // 
+            this.resultListView.CheckBoxes = true;
+            this.resultListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.name,
+            this.bitRate,
+            this.extName,
+            this.size,
+            this.time});
+            this.resultListView.FullRowSelect = true;
+            this.resultListView.Location = new System.Drawing.Point(7, 79);
+            this.resultListView.Name = "resultListView";
+            this.resultListView.Size = new System.Drawing.Size(486, 362);
+            this.resultListView.TabIndex = 14;
+            this.resultListView.UseCompatibleStateImageBehavior = false;
+            this.resultListView.View = System.Windows.Forms.View.Details;
+            // 
+            // name
+            // 
+            this.name.Text = "歌名";
+            this.name.Width = 274;
+            // 
+            // bitRate
+            // 
+            this.bitRate.Text = "比特率";
+            // 
+            // extName
+            // 
+            this.extName.Text = "格式";
+            this.extName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.extName.Width = 40;
+            // 
+            // size
+            // 
+            this.size.Text = "大小";
+            // 
+            // time
+            // 
+            this.time.Text = "时长";
+            this.time.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.time.Width = 50;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.CaptionHeight = 20;
-            this.ClientSize = new System.Drawing.Size(440, 550);
+            this.ClientSize = new System.Drawing.Size(500, 550);
+            this.Controls.Add(this.resultListView);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.skinButton3);
             this.Controls.Add(this.skinButton2);
             this.Controls.Add(this.skinButton1);
@@ -164,8 +209,8 @@
             this.Controls.Add(this.textBox1);
             this.ForeColor = System.Drawing.Color.Black;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(440, 550);
-            this.MinimumSize = new System.Drawing.Size(440, 550);
+            this.MaximumSize = new System.Drawing.Size(500, 550);
+            this.MinimumSize = new System.Drawing.Size(500, 550);
             this.Name = "Form1";
             this.Radius = 10;
             this.ShowDrawIcon = false;
@@ -190,9 +235,14 @@
         private CCWin.SkinControl.SkinButton skinButton1;
         private CCWin.SkinControl.SkinButton skinButton2;
         private CCWin.SkinControl.SkinButton skinButton3;
-        private CCWin.SkinControl.SkinListBox listBox1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ListView resultListView;
+        private System.Windows.Forms.ColumnHeader name;
+        private System.Windows.Forms.ColumnHeader bitRate;
+        private System.Windows.Forms.ColumnHeader extName;
+        private System.Windows.Forms.ColumnHeader time;
+        private System.Windows.Forms.ColumnHeader size;
     }
 }
 

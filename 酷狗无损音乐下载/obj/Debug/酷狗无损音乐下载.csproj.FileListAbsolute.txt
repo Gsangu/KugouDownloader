@@ -24,3 +24,15 @@ D:\我的文档\Visual Studio 2015\Projects\酷狗无损音乐下载\酷狗无�
 D:\我的文档\Visual Studio 2015\Projects\酷狗无损音乐下载\酷狗无损音乐下载\obj\Debug\酷狗无损音乐下载.Form1.resources
 D:\我的文档\Visual Studio 2015\Projects\酷狗无损音乐下载\酷狗无损音乐下载\obj\Debug\酷狗无损音乐下载.Properties.Resources.resources
 D:\我的文档\Visual Studio 2015\Projects\酷狗无损音乐下载\酷狗无损音乐下载\obj\Debug\酷狗无损音乐下载.csproj.GenerateResource.Cache
+G:\VSProjects\KugouDownloader\酷狗无损音乐下载\bin\Debug\酷狗无损音乐下载.exe.config
+G:\VSProjects\KugouDownloader\酷狗无损音乐下载\bin\Debug\酷狗无损音乐下载.exe
+G:\VSProjects\KugouDownloader\酷狗无损音乐下载\bin\Debug\酷狗无损音乐下载.pdb
+G:\VSProjects\KugouDownloader\酷狗无损音乐下载\bin\Debug\Newtonsoft.Json.dll
+G:\VSProjects\KugouDownloader\酷狗无损音乐下载\bin\Debug\CSkin.xml
+G:\VSProjects\KugouDownloader\酷狗无损音乐下载\bin\Debug\Newtonsoft.Json.xml
+G:\VSProjects\KugouDownloader\酷狗无损音乐下载\obj\Debug\酷狗无损音乐下载.csprojResolveAssemblyReference.cache
+G:\VSProjects\KugouDownloader\酷狗无损音乐下载\obj\Debug\酷狗无损音乐下载.Form1.resources
+G:\VSProjects\KugouDownloader\酷狗无损音乐下载\obj\Debug\酷狗无损音乐下载.Properties.Resources.resources
+G:\VSProjects\KugouDownloader\酷狗无损音乐下载\obj\Debug\酷狗无损音乐下载.csproj.GenerateResource.Cache
+G:\VSProjects\KugouDownloader\酷狗无损音乐下载\obj\Debug\酷狗无损音乐下载.exe
+G:\VSProjects\KugouDownloader\酷狗无损音乐下载\obj\Debug\酷狗无损音乐下载.pdb
