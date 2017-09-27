@@ -33,9 +33,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.skinButton1 = new CCWin.SkinControl.SkinButton();
-            this.skinButton2 = new CCWin.SkinControl.SkinButton();
-            this.skinButton3 = new CCWin.SkinControl.SkinButton();
+            this.searchBtn = new CCWin.SkinControl.SkinButton();
+            this.downBtn = new CCWin.SkinControl.SkinButton();
+            this.pathBtn = new CCWin.SkinControl.SkinButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.resultListView = new System.Windows.Forms.ListView();
@@ -44,6 +44,9 @@
             this.extName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.size = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.time = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lastPageBtn = new CCWin.SkinControl.SkinButton();
+            this.nextPageBtn = new CCWin.SkinControl.SkinButton();
+            this.pageNum = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,13 +54,13 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(7, 51);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(405, 21);
+            this.textBox1.Size = new System.Drawing.Size(415, 21);
             this.textBox1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 493);
+            this.label1.Location = new System.Drawing.Point(7, 519);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 3;
@@ -65,7 +68,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(54, 489);
+            this.textBox2.Location = new System.Drawing.Point(54, 515);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(358, 21);
             this.textBox2.TabIndex = 4;
@@ -74,63 +77,63 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // skinButton1
+            // searchBtn
             // 
-            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton1.BaseColor = System.Drawing.Color.LightBlue;
-            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton1.DownBack = null;
-            this.skinButton1.DownBaseColor = System.Drawing.Color.Gainsboro;
-            this.skinButton1.GlowColor = System.Drawing.Color.LightBlue;
-            this.skinButton1.Location = new System.Drawing.Point(418, 50);
-            this.skinButton1.MouseBack = null;
-            this.skinButton1.MouseBaseColor = System.Drawing.Color.LightBlue;
-            this.skinButton1.Name = "skinButton1";
-            this.skinButton1.NormlBack = null;
-            this.skinButton1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton1.Size = new System.Drawing.Size(75, 23);
-            this.skinButton1.TabIndex = 9;
-            this.skinButton1.Text = "搜素";
-            this.skinButton1.UseVisualStyleBackColor = false;
-            this.skinButton1.Click += new System.EventHandler(this.button1_Click);
+            this.searchBtn.BackColor = System.Drawing.Color.Transparent;
+            this.searchBtn.BaseColor = System.Drawing.Color.LightBlue;
+            this.searchBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.searchBtn.DownBack = null;
+            this.searchBtn.DownBaseColor = System.Drawing.Color.Gainsboro;
+            this.searchBtn.GlowColor = System.Drawing.Color.LightBlue;
+            this.searchBtn.Location = new System.Drawing.Point(428, 48);
+            this.searchBtn.MouseBack = null;
+            this.searchBtn.MouseBaseColor = System.Drawing.Color.LightBlue;
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.NormlBack = null;
+            this.searchBtn.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.searchBtn.Size = new System.Drawing.Size(75, 25);
+            this.searchBtn.TabIndex = 9;
+            this.searchBtn.Text = "搜索";
+            this.searchBtn.UseVisualStyleBackColor = false;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
-            // skinButton2
+            // downBtn
             // 
-            this.skinButton2.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton2.BaseColor = System.Drawing.Color.LightBlue;
-            this.skinButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton2.DownBack = null;
-            this.skinButton2.DownBaseColor = System.Drawing.Color.LightBlue;
-            this.skinButton2.Location = new System.Drawing.Point(219, 447);
-            this.skinButton2.MouseBack = null;
-            this.skinButton2.MouseBaseColor = System.Drawing.Color.LightBlue;
-            this.skinButton2.Name = "skinButton2";
-            this.skinButton2.NormlBack = null;
-            this.skinButton2.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton2.Size = new System.Drawing.Size(88, 29);
-            this.skinButton2.TabIndex = 10;
-            this.skinButton2.Text = "下载";
-            this.skinButton2.UseVisualStyleBackColor = false;
-            this.skinButton2.Click += new System.EventHandler(this.button3_Click);
+            this.downBtn.BackColor = System.Drawing.Color.Transparent;
+            this.downBtn.BaseColor = System.Drawing.Color.LightBlue;
+            this.downBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.downBtn.DownBack = null;
+            this.downBtn.DownBaseColor = System.Drawing.Color.LightBlue;
+            this.downBtn.Location = new System.Drawing.Point(218, 480);
+            this.downBtn.MouseBack = null;
+            this.downBtn.MouseBaseColor = System.Drawing.Color.LightBlue;
+            this.downBtn.Name = "downBtn";
+            this.downBtn.NormlBack = null;
+            this.downBtn.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.downBtn.Size = new System.Drawing.Size(88, 29);
+            this.downBtn.TabIndex = 10;
+            this.downBtn.Text = "下载";
+            this.downBtn.UseVisualStyleBackColor = false;
+            this.downBtn.Click += new System.EventHandler(this.downBtn_Click);
             // 
-            // skinButton3
+            // pathBtn
             // 
-            this.skinButton3.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton3.BaseColor = System.Drawing.Color.LightBlue;
-            this.skinButton3.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton3.DownBack = null;
-            this.skinButton3.DownBaseColor = System.Drawing.Color.LightBlue;
-            this.skinButton3.Location = new System.Drawing.Point(418, 488);
-            this.skinButton3.MouseBack = null;
-            this.skinButton3.MouseBaseColor = System.Drawing.Color.LightBlue;
-            this.skinButton3.Name = "skinButton3";
-            this.skinButton3.NormlBack = null;
-            this.skinButton3.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton3.Size = new System.Drawing.Size(75, 23);
-            this.skinButton3.TabIndex = 11;
-            this.skinButton3.Text = "浏览";
-            this.skinButton3.UseVisualStyleBackColor = false;
-            this.skinButton3.Click += new System.EventHandler(this.button2_Click);
+            this.pathBtn.BackColor = System.Drawing.Color.Transparent;
+            this.pathBtn.BaseColor = System.Drawing.Color.LightBlue;
+            this.pathBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.pathBtn.DownBack = null;
+            this.pathBtn.DownBaseColor = System.Drawing.Color.LightBlue;
+            this.pathBtn.Location = new System.Drawing.Point(418, 513);
+            this.pathBtn.MouseBack = null;
+            this.pathBtn.MouseBaseColor = System.Drawing.Color.LightBlue;
+            this.pathBtn.Name = "pathBtn";
+            this.pathBtn.NormlBack = null;
+            this.pathBtn.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.pathBtn.Size = new System.Drawing.Size(75, 25);
+            this.pathBtn.TabIndex = 11;
+            this.pathBtn.Text = "浏览";
+            this.pathBtn.UseVisualStyleBackColor = false;
+            this.pathBtn.Click += new System.EventHandler(this.pathBtn_Click);
             // 
             // statusStrip1
             // 
@@ -138,9 +141,9 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(4, 524);
+            this.statusStrip1.Location = new System.Drawing.Point(4, 544);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(492, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(502, 22);
             this.statusStrip1.TabIndex = 13;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -162,7 +165,7 @@
             this.resultListView.FullRowSelect = true;
             this.resultListView.Location = new System.Drawing.Point(7, 79);
             this.resultListView.Name = "resultListView";
-            this.resultListView.Size = new System.Drawing.Size(486, 362);
+            this.resultListView.Size = new System.Drawing.Size(496, 362);
             this.resultListView.TabIndex = 14;
             this.resultListView.UseCompatibleStateImageBehavior = false;
             this.resultListView.View = System.Windows.Forms.View.Details;
@@ -190,7 +193,56 @@
             // 
             this.time.Text = "时长";
             this.time.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.time.Width = 50;
+            // 
+            // lastPageBtn
+            // 
+            this.lastPageBtn.BackColor = System.Drawing.Color.Transparent;
+            this.lastPageBtn.BaseColor = System.Drawing.Color.LightBlue;
+            this.lastPageBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.lastPageBtn.DownBack = null;
+            this.lastPageBtn.DownBaseColor = System.Drawing.Color.Gainsboro;
+            this.lastPageBtn.Enabled = false;
+            this.lastPageBtn.GlowColor = System.Drawing.Color.LightBlue;
+            this.lastPageBtn.Location = new System.Drawing.Point(376, 447);
+            this.lastPageBtn.MouseBack = null;
+            this.lastPageBtn.MouseBaseColor = System.Drawing.Color.LightBlue;
+            this.lastPageBtn.Name = "lastPageBtn";
+            this.lastPageBtn.NormlBack = null;
+            this.lastPageBtn.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.lastPageBtn.Size = new System.Drawing.Size(60, 25);
+            this.lastPageBtn.TabIndex = 15;
+            this.lastPageBtn.Text = "上一页";
+            this.lastPageBtn.UseVisualStyleBackColor = false;
+            this.lastPageBtn.Click += new System.EventHandler(this.lastPageBtn_Click);
+            // 
+            // nextPageBtn
+            // 
+            this.nextPageBtn.BackColor = System.Drawing.Color.Transparent;
+            this.nextPageBtn.BaseColor = System.Drawing.Color.LightBlue;
+            this.nextPageBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.nextPageBtn.DownBack = null;
+            this.nextPageBtn.DownBaseColor = System.Drawing.Color.Gainsboro;
+            this.nextPageBtn.Enabled = false;
+            this.nextPageBtn.GlowColor = System.Drawing.Color.LightBlue;
+            this.nextPageBtn.Location = new System.Drawing.Point(442, 447);
+            this.nextPageBtn.MouseBack = null;
+            this.nextPageBtn.MouseBaseColor = System.Drawing.Color.LightBlue;
+            this.nextPageBtn.Name = "nextPageBtn";
+            this.nextPageBtn.NormlBack = null;
+            this.nextPageBtn.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.nextPageBtn.Size = new System.Drawing.Size(60, 25);
+            this.nextPageBtn.TabIndex = 16;
+            this.nextPageBtn.Text = "下一页";
+            this.nextPageBtn.UseVisualStyleBackColor = false;
+            this.nextPageBtn.Click += new System.EventHandler(this.nextPageBtn_Click);
+            // 
+            // pageNum
+            // 
+            this.pageNum.AutoSize = true;
+            this.pageNum.Location = new System.Drawing.Point(329, 453);
+            this.pageNum.Name = "pageNum";
+            this.pageNum.Size = new System.Drawing.Size(0, 12);
+            this.pageNum.TabIndex = 17;
             // 
             // Form1
             // 
@@ -198,19 +250,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.CaptionHeight = 20;
-            this.ClientSize = new System.Drawing.Size(500, 550);
+            this.ClientSize = new System.Drawing.Size(510, 570);
+            this.Controls.Add(this.pageNum);
+            this.Controls.Add(this.nextPageBtn);
+            this.Controls.Add(this.lastPageBtn);
             this.Controls.Add(this.resultListView);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.skinButton3);
-            this.Controls.Add(this.skinButton2);
-            this.Controls.Add(this.skinButton1);
+            this.Controls.Add(this.pathBtn);
+            this.Controls.Add(this.downBtn);
+            this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.ForeColor = System.Drawing.Color.Black;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(500, 550);
-            this.MinimumSize = new System.Drawing.Size(500, 550);
+            this.MaximumSize = new System.Drawing.Size(510, 570);
+            this.MinimumSize = new System.Drawing.Size(510, 570);
             this.Name = "Form1";
             this.Radius = 10;
             this.ShowDrawIcon = false;
@@ -232,9 +287,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Timer timer1;
-        private CCWin.SkinControl.SkinButton skinButton1;
-        private CCWin.SkinControl.SkinButton skinButton2;
-        private CCWin.SkinControl.SkinButton skinButton3;
+        private CCWin.SkinControl.SkinButton searchBtn;
+        private CCWin.SkinControl.SkinButton downBtn;
+        private CCWin.SkinControl.SkinButton pathBtn;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ListView resultListView;
@@ -243,6 +298,9 @@
         private System.Windows.Forms.ColumnHeader extName;
         private System.Windows.Forms.ColumnHeader time;
         private System.Windows.Forms.ColumnHeader size;
+        private CCWin.SkinControl.SkinButton lastPageBtn;
+        private CCWin.SkinControl.SkinButton nextPageBtn;
+        private System.Windows.Forms.Label pageNum;
     }
 }
 

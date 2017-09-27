@@ -25,7 +25,7 @@ namespace 酷狗无损音乐下载
         }
 
         //浏览
-        private void button2_Click(object sender, EventArgs e)
+        private void pathBtn_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog ofd = new FolderBrowserDialog();
             if (ofd.ShowDialog() == DialogResult.OK)
@@ -34,14 +34,73 @@ namespace 酷狗无损音乐下载
                 target = textBox2.Text;
             }
         }
-        //List<string> Result = new List<string>();
+
+        int page = 1;
 
         //搜索
-        private void button1_Click(object sender, EventArgs e)
+        private void searchBtn_Click(object sender, EventArgs e)
         {
+            page = 1;
+            GetList(page);
+
+            if (resultListView.Items.Count > 0)
+            {
+                nextPageBtn.Enabled = true;
+            }
+            else
+            {
+                nextPageBtn.Enabled = false;
+            }
+        }
+
+        //上一页
+        private void lastPageBtn_Click(object sender, EventArgs e)
+        {
+            if (page > 1)
+            {
+                page--;
+                GetList(page);
+
+                if (page == 1)
+                    lastPageBtn.Enabled = false;
+                if (resultListView.Items.Count > 0)
+                {
+                    nextPageBtn.Enabled = true;
+                }
+                else
+                {
+                    nextPageBtn.Enabled = false;
+                }
+            }
+        }
+
+        //下一页
+        private void nextPageBtn_Click(object sender, EventArgs e)
+        {
+            page++;
+            GetList(page);
+
+            if (page > 1)
+            {
+                lastPageBtn.Enabled = true;
+            }
+            if(resultListView.Items.Count>0)
+            {
+                nextPageBtn.Enabled = true;
+            }
+            else
+            {
+                nextPageBtn.Enabled = false;
+            }
+        }
+
+        //获取歌曲列表
+        private void GetList(int page)
+        {
+            pageNum.Text = "第" + page + "页";
             resultListView.Items.Clear();
             WebClient web = new WebClient();
-            string webSite = "http://mobilecdn.kugou.com/api/v3/search/song?format=json&keyword=" + textBox1.Text + "&page=1&pagesize=100";
+            string webSite = "http://mobilecdn.kugou.com/api/v3/search/song?format=json&keyword=" + textBox1.Text + "&page=" + page + "&pagesize=100";
             byte[] buffer = web.DownloadData(webSite);
             string html = Encoding.UTF8.GetString(buffer);
             JObject kugou = JObject.Parse(html);
@@ -79,7 +138,6 @@ namespace 酷狗无损音乐下载
             });
             resultListView.EndUpdate();  //结束数据处理，UI界面一次性绘制
         }
-
         public string GetMD5(string str)
         {
             MD5 md5 = MD5.Create();
@@ -96,7 +154,7 @@ namespace 酷狗无损音乐下载
         private IntPtr a;
         XL.DownTaskInfo info = new XL.DownTaskInfo();
         //下载
-        private void button3_Click(object sender, EventArgs e)
+        private void downBtn_Click(object sender, EventArgs e)
         {
             try
             {
@@ -144,5 +202,6 @@ namespace 酷狗无损音乐下载
                 timer1.Enabled = false;
             }
         }
+
     }
 }
