@@ -39,11 +39,9 @@ namespace 酷狗无损音乐下载
         //搜索
         private void button1_Click(object sender, EventArgs e)
         {
-            //listBox1.Items.Clear();
             resultListView.Items.Clear();
-            //Result.Clear();
             WebClient web = new WebClient();
-            string webSite = "http://mobilecdn.kugou.com/api/v3/search/song?format=json&keyword=" + textBox1.Text + "&page=1&pagesize=30";
+            string webSite = "http://mobilecdn.kugou.com/api/v3/search/song?format=json&keyword=" + textBox1.Text + "&page=1&pagesize=100";
             byte[] buffer = web.DownloadData(webSite);
             string html = Encoding.UTF8.GetString(buffer);
             JObject kugou = JObject.Parse(html);
