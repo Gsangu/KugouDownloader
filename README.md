@@ -9,4 +9,4 @@
 * 界面调整
 #### 下载本程序
 * 解压后双击“酷狗无损音乐下载.exe”即可运行
-* [下载页面（点击页面右侧“download”即可下载）](https://github.com/C-Li/KugouDownloader/blob/master/%E9%85%B7%E7%8B%97%E6%97%A0%E6%8D%9F%E9%9F%B3%E4%B9%90%E4%B8%8B%E8%BD%BD/bin/Debug/%E7%A8%8B%E5%BA%8F%E5%8C%85.7z)
+* [下载页面（点击program.7z下载）](https://github.com/C-Li/KugouDownloader/releases/)
