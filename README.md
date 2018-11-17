@@ -15,5 +15,4 @@
 <img src="/img.png" width=400 />
 
 #### 下载本程序
-* 解压后双击“酷狗无损音乐下载.exe”即可运行
 * [下载页面](https://github.com/C-Li/KugouDownloader/releases/)
