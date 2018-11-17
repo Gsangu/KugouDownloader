@@ -1,12 +1,15 @@
 # 酷狗无损音乐下载器
 酷狗无损音乐下载器
 #### 功能
-* 搜索酷狗音乐无损的歌曲
+* 搜索酷狗音乐库中的无损音乐
 * 使用迅雷组件下载
 * 支持音乐批量下载
-#### 修复
-* 修复付费音乐项导致解析出错的Bug
+#### 修改
+* 下载速度计算部分重构
+* 界面显示逻辑重构
 * 界面调整
+#### 界面截图
+<img src="/img.png" width=400 />
 #### 下载本程序
 * 解压后双击“酷狗无损音乐下载.exe”即可运行
-* [下载页面（点击program.7z下载）](https://github.com/C-Li/KugouDownloader/releases/)
+* [下载页面](https://github.com/C-Li/KugouDownloader/releases/)
